@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarketingHub — Панель маркетинга</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <h2 class="logo">Marketing<span>Hub</span></h2>
+    <p class="menu-label">ГЛАВНОЕ МЕНЮ</p>
+    <nav>
+      <a class="nav-link active" href="#dashboard">▦ Обзор</a>
+      <a class="nav-link" href="#campaigns">▣ Кампании</a>
+      <a class="nav-link" href="#channels">◉ Каналы</a>
+      <a class="nav-link" href="#reports">▤ Отчёты</a>
+    </nav>
+    <div class="sidebar-bottom">MarketingHub © 2026</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="muted">Рабочее пространство / Маркетинг</p>
+        <h1>Обзор маркетинга</h1>
+      </div>
+      <button id="dateButton" class="secondary-button">Последние 30 дней ▾</button>
+    </header>
+
+    <section id="dashboard">
+      <div class="section-heading">
+        <div>
+          <h2>Ключевые показатели</h2>
+          <p class="muted">Результаты ваших маркетинговых кампаний</p>
+        </div>
+        <span class="status"><span class="dot"></span> Данные обновлены</span>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <p>Общий доход</p>
+          <h2 id="revenue">₽1 284 500</h2>
+          <span class="positive">↑ 12,8% за период</span>
+        </article>
+        <article class="stat-card">
+          <p>Посетители</p>
+          <h2 id="visitors">84 290</h2>
+          <span class="positive">↑ 8,2% за период</span>
+        </article>
+        <article class="stat-card">
+          <p>Конверсии</p>
+          <h2 id="conversions">3 642</h2>
+          <span class="positive">↑ 5,4% за период</span>
+        </article>
+        <article class="stat-card">
+          <p>Рекламные расходы</p>
+          <h2 id="spend">₽246 800</h2>
+          <span class="negative">↑ 2,1% за период</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel chart-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Динамика дохода</h2>
+          <p class="muted">Доход по неделям, ₽</p>
+        </div>
+        <select id="chartType" aria-label="Период графика">
+          <option value="month">За месяц</option>
+          <option value="week">За неделю</option>
+        </select>
+      </div>
+      <div class="chart" id="chart" aria-label="График дохода"></div>
+      <div class="chart-legend"><span></span> Доход</div>
+    </section>
+
+    <section id="campaigns" class="panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Маркетинговые кампании</h2>
+          <p class="muted">Управляйте активными кампаниями</p>
+        </div>
+        <button id="addCampaign" class="primary-button">+ Новая кампания</button>
+      </div>
+
+      <input id="searchInput" class="search" type="search"
+        placeholder="Поиск кампании..." aria-label="Поиск кампании">
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Название</th>
+              <th>Канал</th>
+              <th>Бюджет</th>
+              <th>Конверсии</th>
+              <th>Статус</th>
+            </tr>
+          </thead>
+          <tbody id="campaignTable"></tbody>
+        </table>
+      </div>
+      <p id="campaignCount" class="muted table-footer"></p>
+    </section>
+
+    <section id="channels" class="panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Эффективность каналов</h2>
+          <p class="muted">Распределение маркетинговых результатов</p>
+        </div>
+      </div>
+      <div class="channels-grid">
+        <div class="channel">
+          <div class="channel-title"><span>Поисковая реклама</span><b>42%</b></div>
+          <div class="progress"><span style="width:42%"></span></div>
+        </div>
+        <div class="channel">
+          <div class="channel-title"><span>Социальные сети</span><b>28%</b></div>
+          <div class="progress purple"><span
+
+
+style="width:28%"></span></div>
+        </div>
+        <div class="channel">
+          <div class="channel-title"><span>Email-маркетинг</span><b>18%</b></div>
+          <div class="progress orange"><span style="width:18%"></span></div>
+        </div>
+        <div class="channel">
+          <div class="channel-title"><span>Другие каналы</span><b>12%</b></div>
+          <div class="progress green"><span style="width:12%"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>MarketingHub · Демонстрационная панель · 2026</footer>
+  </main>
+</body>
+</html>
+
+
+
+1 сообщение
+
